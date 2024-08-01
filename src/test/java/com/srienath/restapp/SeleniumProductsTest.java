@@ -121,7 +121,7 @@ public class SeleniumProductsTest {
 	    }
 	    driver.findElement(By.id("homebutton")).click();
 	 // Added assertion
-	    String expectedUrl = "http://localhost:3000/home";
+	    String expectedUrl = "http://localhost:4444/home";
 	    String actualUrl = driver.getCurrentUrl();
 	    assertEquals(expectedUrl, actualUrl);
 	  }
