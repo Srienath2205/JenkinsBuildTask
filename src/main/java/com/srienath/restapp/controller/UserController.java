@@ -19,8 +19,8 @@ import com.srienath.restapp.serviceimpl.UserServiceImpl;
 @CrossOrigin("http://localhost:3000")
 public class UserController {
  
-	
 	UserServiceImpl service;
+	
 	public UserController(UserServiceImpl service) {
 		super();
 		this.service = service;

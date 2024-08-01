@@ -90,7 +90,6 @@ public class Products {
 
 	public Products() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -99,7 +98,7 @@ public class Products {
 				+ ", stockLeft=" + stockLeft + ", price=" + price + ", boutique=" + boutique + "]";
 	}
 
-	public Products orElse(Object object) {
+	public Products orElse() {
 		return null;
 	}
 

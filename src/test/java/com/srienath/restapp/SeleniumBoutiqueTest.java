@@ -18,23 +18,23 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.Dimension;
 
-public class SeleniumTestingBoutique {
+public class SeleniumBoutiqueTest {
 	private WebDriver driver;
 
 	  @BeforeEach
-	  public void setUp() {
+	  void setUp() {
 		  driver = new ChromeDriver();
 		  driver.manage().window().maximize();
 		  driver.get("http://localhost:3000/home");   
 	  }
 	  
 	  @AfterEach
-	  public void tearDown() {
+	  void tearDown() {
 	    driver.quit();
 	  }
 	  
 	  @Test
-	  public void testCase001AddBoutique() {
+	  void testCase001AddBoutique() {
 	    driver.get("http://localhost:3000/home");
 	    driver.manage().window().setSize(new Dimension(1528, 816));
 	    driver.findElement(By.linkText("Boutique")).click();
@@ -58,7 +58,7 @@ public class SeleniumTestingBoutique {
 	  }
 	  
 	  @Test
-	  public void testCase002UpdateBoutique() {
+	  void testCase002UpdateBoutique() {
 	    driver.get("http://localhost:3000/viewboutique");
 	    driver.manage().window().setSize(new Dimension(1528, 816));
 	    driver.findElement(By.xpath("//table[@id=\'addemp\']/tbody/tr[4]/td[6]/a")).click();
@@ -85,7 +85,7 @@ public class SeleniumTestingBoutique {
 	  }
 	  
 //	  @Test
-//	  public void testCase003DeleteBoutique() {
+//	  void testCase003DeleteBoutique() {
 //	    driver.get("http://localhost:3000/viewboutique");
 //	    driver.manage().window().setSize(new Dimension(1528, 816));
 //	    driver.findElement(By.xpath("//table[@id=\'addemp\']/tbody/tr[2]/td[6]/button")).click();
@@ -99,7 +99,7 @@ public class SeleniumTestingBoutique {
 //	  }
 	  
 	  @Test
-	  public void testCase004ViewBoutique() {
+	  void testCase004ViewBoutique() {
 	    driver.get("http://localhost:3000/home");
 	    driver.manage().window().setSize(new Dimension(1528, 816));
 	    driver.findElement(By.linkText("Boutique")).click();
@@ -114,6 +114,9 @@ public class SeleniumTestingBoutique {
 	      builder.moveToElement(element, 0, 0).perform();
 	    }
 	    driver.findElement(By.id("homebutton")).click();
+	 // Added assertion
+	    String expectedUrl = "http://localhost:3000/home";
+	    String actualUrl = driver.getCurrentUrl();
+	    assertEquals(expectedUrl, actualUrl);
 	  }
-	
 }

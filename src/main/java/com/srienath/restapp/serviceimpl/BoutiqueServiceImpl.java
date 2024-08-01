@@ -57,8 +57,7 @@ public class BoutiqueServiceImpl implements BoutiqueService{
 	
 	public List<Integer> getAllId()
 	{
-		List<Integer> idList = ownrepo.getIDList();
-		return idList;
+		return ownrepo.getIDList();
 	}
 }
 

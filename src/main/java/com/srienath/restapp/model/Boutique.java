@@ -75,7 +75,6 @@ public class Boutique {
 
 	public Boutique() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -84,7 +83,7 @@ public class Boutique {
 				+ ", address=" + address + ", description=" + description + "]";
 	}
 
-	public Boutique orElse(Object object) {
+	public Boutique orElse() {
 		return null;
 	}
 

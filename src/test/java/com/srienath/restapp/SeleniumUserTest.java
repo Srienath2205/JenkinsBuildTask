@@ -13,21 +13,21 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.Dimension;
 
-public class SeleniumTestingUser {
+public class SeleniumUserTest {
   private WebDriver driver;
 
   @BeforeEach
-  public void setUp() {
+  void setUp() {
     driver = new ChromeDriver();   
   }
   
   @AfterEach
-  public void tearDown() {
+  void tearDown() {
     driver.quit();
   }
  
   @Test
-  public void testCase001SignUp() {
+  void testCase001SignUp() {
     driver.get("http://localhost:3000/");
     driver.manage().window().setSize(new Dimension(1528, 816));
     driver.findElement(By.name("userName")).click();
@@ -47,7 +47,7 @@ public class SeleniumTestingUser {
   }
   
   @Test
-  public void testCase002Login() {
+  void testCase002Login() {
     driver.get("http://localhost:3000/");
     driver.manage().window().setSize(new Dimension(1528, 816));
     driver.findElement(By.cssSelector(".btton-secondary")).click();

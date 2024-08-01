@@ -21,6 +21,9 @@ public class ProductsController {
 	
 	ProductsServiceImpl service;
 	
+	String success="Success";
+	String failure="Failure";
+	
 	public ProductsController(ProductsServiceImpl service) {
 		super();
 		this.service = service;
@@ -32,12 +35,12 @@ public class ProductsController {
 		String msg="";
 		try {
 			service.addProduct(petshop);
-			msg="Success";
+			msg=success;
 		} 
 		
 		catch(Exception e) {
 			e.printStackTrace();
-			msg="Failure";
+			msg=failure;
 		}
 		return msg;
 	}
@@ -58,12 +61,12 @@ public class ProductsController {
 		String msg="";
 		try {
 			service.updateProduct(products);
-			msg="Success";
+			msg=success;
 		} 
 		
 		catch(Exception e) {
 			e.printStackTrace();
-			msg="Failure";
+			msg=failure;
 		}
 		return msg;
 	}
@@ -73,12 +76,12 @@ public class ProductsController {
 		String msg="";
 		try {
 			service.deleteProduct(id);
-			msg="Success";
+			msg=success;
 		} 
 		
 		catch(Exception e) {
 			e.printStackTrace();
-			msg="Failure";
+			msg=failure;
 		}
 		return msg;
 	}

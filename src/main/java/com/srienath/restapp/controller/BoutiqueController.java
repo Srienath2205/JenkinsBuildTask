@@ -21,6 +21,9 @@ import com.srienath.restapp.serviceimpl.BoutiqueServiceImpl;
 public class BoutiqueController {
 	BoutiqueServiceImpl service;
 	
+	String success="Success";
+	String failure="Failure";
+	
 	public BoutiqueController(BoutiqueServiceImpl service) {
 		super();
 		this.service = service;
@@ -32,12 +35,12 @@ public class BoutiqueController {
 		String msg="";
 		try {
 			service.addBoutique(boutique);
-			msg="Success";
+			msg=success;
 		} 
 		
 		catch(Exception e) {
 			e.printStackTrace();
-			msg="Failure";
+			msg=failure;
 		}
 		return msg;
 	}
@@ -58,12 +61,12 @@ public class BoutiqueController {
 		String msg="";
 		try {
 			service.updateBoutique(boutique);
-			msg="Success";
+			msg=success;
 		} 
 		
 		catch(Exception e) {
 			e.printStackTrace();
-			msg="Failure";
+			msg=failure;
 		}
 		return msg;
 	}
@@ -73,12 +76,12 @@ public class BoutiqueController {
 		String msg="";
 		try {
 			service.deleteBoutique(id);
-			msg="Success";
+			msg=success;
 		} 
 		
 		catch(Exception e) {
 			e.printStackTrace();
-			msg="Failure";
+			msg=failure;
 		}
 		return msg;
 	}
