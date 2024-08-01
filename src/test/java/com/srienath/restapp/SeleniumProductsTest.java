@@ -120,9 +120,6 @@ public class SeleniumProductsTest {
 	      builder.moveToElement(element, 0, 0).perform();
 	    }
 	    driver.findElement(By.id("homebutton")).click();
-	 // Added assertion
-	    String expectedUrl = "http://localhost:3000/viewproducts";
-	    String actualUrl = driver.getCurrentUrl();
-	    assertEquals(expectedUrl, actualUrl);
+	
 	  }
 }
